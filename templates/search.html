@@ -1,0 +1,19 @@
+<h2>🔍 Rechercher un document</h2>
+<form method="post">
+  <input type="text" name="query" placeholder="Nom du fichier ou mot-clé" required>
+  <button type="submit">Rechercher</button>
+</form>
+
+{% if results is not none %}
+  <h3>Résultats :</h3>
+  {% if results %}
+    <ul>
+      {% for r in results %}
+        <li><a href="{{ r.url }}" target="_blank">{{ r.path }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Aucun fichier trouvé.</p>
+  {% endif %}
+{% endif %}
+<a href="/">⬅ Retour</a>

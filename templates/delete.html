@@ -1,0 +1,11 @@
+<h2>🗑️ Supprimer un fichier PDF</h2>
+<form method="post">
+  <label>Chemin relatif :</label>
+  <input name="filepath" placeholder="ex: Neuro/S1/UE/SousDossier/fichier.pdf" required>
+  <button type="submit">Supprimer</button>
+</form>
+
+{% if message %}
+  <p>{{ message }}</p>
+{% endif %}
+<a href="/">⬅ Retour</a>
