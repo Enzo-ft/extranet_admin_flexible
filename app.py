@@ -61,6 +61,9 @@ def upload_file():
             shutil.copy(file_path, os.path.join(netlify_path, filename))
 
             html_generator.generate_html()
+            source_html = os.path.join('templates', 'docs_etudiants.html')
+            target_html = os.path.join(NETLIFY_FOLDER, 'docs_etudiants.html')
+            shutil.copy(source_html, target_html)
 
             return render_template('upload.html', success="Fichier uploadé avec succès ✅")
         else:
