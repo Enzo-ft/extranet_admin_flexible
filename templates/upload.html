@@ -1,0 +1,21 @@
+<h2>Uploader un document PDF</h2>
+<form method="post" enctype="multipart/form-data">
+  <label>Master :</label>
+  <select name="master"><option>Neuro</option><option>Physio</option><option>Mutualisé</option></select><br>
+
+  <label>Semestre :</label>
+  <select name="semestre"><option>S1</option><option>S2</option><option>S3</option></select><br>
+
+  <label>UE :</label>
+  <input name="ue"><br>
+
+  <label>Sous-dossier :</label>
+  <input name="sous_dossier"><br>
+
+  <label>Fichier PDF :</label>
+  <input type="file" name="file" accept=".pdf"><br>
+
+  <button type="submit">Uploader</button>
+</form>
+{% if success %}<p>{{ success }}</p>{% endif %}
+<a href="/">⬅ Retour</a>
